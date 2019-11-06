@@ -21,7 +21,6 @@ border-radius: 10px;
 ::-webkit-scrollbar-thumb {
 background:#655B6C; 
 border-radius: 10px;
-
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -29,6 +28,7 @@ background:#FFFFFF;
 }
 
 
+/*header*/
 
 header{
 	background: #19193D;
@@ -93,14 +93,18 @@ header nav{
 }
 
 #listeuser{
-	width: 15%;
-	height: 200px;
-	border: 2px solid #655B6C;
+	width: 10%;
+	height: 150px;
+	border: 2px solid #0A0618;
+	/*border-radius: 15%;*/
 	position: absolute;
 	right: 50px;
 	float: right;
 	top:30px;
-	background: #655B6C;
+	background: rgba(101, 91, 108, 0.95);
+
+	display: none;
+
 }
 
 #listeuser ul{
@@ -109,7 +113,11 @@ header nav{
 	height: 100%;
 	padding: 0;
 	margin: 0;
+	line-height: 20px;
 }
+
+
+/*bouton retour resercher titre film*/
 
 .titre{
 	width: 100%;
@@ -130,6 +138,25 @@ header nav{
 	width: 150px;
 	height: 30px;
 	margin-right: 50px;
+}
+
+input[type=search] {
+	background: #555 url(http://hp-proliant.co.uk/qual_images/mob-search-icon.png) no-repeat 9px center;
+	border: solid 1px #0A0618;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+}
+
+::placeholder{
+	color: white;
+	font-weight: bold;
+}
+
+input[type=search]:focus {
+	width: 600px;
+	background-color: #ccc;
+	border-color: #333;
+	border: solid 1px #fff;
 }
 
 
@@ -159,6 +186,10 @@ hr{
 	border-right: 1px solid white;
 }
 
+
+/*videos et catégories*/
+
+
 .videos{
 	width: 90%;
 	height: 600px;
@@ -185,7 +216,7 @@ hr{
 .listecatégories ul{
 	justify-content: center;
 	line-height: 60px;
-	font-size: 30px;
+	font-size: 25px;
 	padding-left: : 13px;
 }
 
@@ -197,5 +228,16 @@ hr{
 	display: flex;
 	/*flex-wrap: wrap;*/
 }
+
+
+
+/*footer*/
+
+footer{
+	min-height: 200px;
+}
+
+
+
 
 
