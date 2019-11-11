@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../cssBootstrap/bootstrap.css">
     <link rel="stylesheet" href="../css/home.css">
     <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700&display=swap" rel="stylesheet">
@@ -12,121 +13,144 @@
 </head>
 <body>
 
-<section id="MainPage">  
+    <!-- Section Teasers : présentation des quatres derniers teasers mis en ligne sur la plateforme  -->
+        <section id="Teaser">
+            <img src="../img/Senses.jpg" alt="Image du film Senses">
+            <img src="../img/Le tombeau des Lucioles.png" alt="Image du film Le tombeau des Lucioles">
+            <img src="../img/Audition.jpg" alt="Image du film Audition">
+            <img src="../img/L'intendant Sansho.png" alt="Image du film L'intendant Sansho">
+        </section>  
+        
+    <!-- Section Main Page : logo, boutons, formulaires et phrase d'accroche -->
+        
+        <section id="MainPage">
+            <h1> MISORA</h1>
+            <div id="line"></div>
 
-<!-- Section Teasers : présentation des quatres derniers teasers mis en ligne sur la plateforme  -->
-    <section id="Teaser">
-        <img src="../img/Senses.jpg" alt="Image du film Senses">
-        <img src="../img/Le tombeau des Lucioles.png" alt="Image du film Le tombeau des Lucioles">
-        <img src="../img/Audition.jpg" alt="Image du film Audition">
-        <img src="../img/L'intendant Sansho.png" alt="Image du film L'intendant Sansho">
-    </section>  
-    
-<!-- Section Main : logo, boutons et phrase d'accroche -->
-    <section id="HeaderContainer">
-        <h1> MISORA</h1>
-        <HR></HR>
+            <!-- Boutons -->
+            <section id="Boutons"> 
+                <li id="LogIn" class="btn-lg rounded-0"><a href="#">LOG IN</a></li>
+                <li id="SignUp" class="btn-lg rounded-0"> <a href="#">SIGN UP</a></li>  
+            </section>
 
-        <section id="Boutons">
-            <button>LOG IN</button>
-            <button>SIGN UP</button>
-        </section>
-    </section>   
-</section>  
+            <!-- Icône de fermeture pour formulaire -->
+            <img id="Fermeture" src="../img/Icone Fermeture.png" alt="Icone de fermeture">
 
-<!-- Présentation des abonnements -->
-    <section id="FenêtreAbonnements"> 
-        <img src="../img/Icone Fermeture.png" alt="Icone de fermeture">
-        <div id="AbonnementBasic">
-            <h2>BASIC - 7€/MOIS</h2>
-            <li>
-                <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span>  
-            </li>
-            <li>
-                <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li>
-                <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span> 
-            </li>
-            <li>
-                <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li>
-                <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span>
-            </li>    
-            <li>
-                <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-
-            <button type="submit" class="button button-block">Souscrire</button>
-        </div>
-        <div id="AbonnementPremium">
-                <img src="../img/Icone Fermeture.png" alt="Icone de fermeture">
-                <h2>PREMIUM - 11€/MOIS</h2>
-                <li>
-                    <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span>  
-                </li>
-                <li>
-                <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span>
-                </li>
-                <li>
-                    <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span> 
-                </li>
-                <li>
-                    <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span>
-                </li>
-                <li>
-                    <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span>
-                </li>    
-                <li>
-                    <input type="checkbox" name="check-box" /> <span>Lorem ipsum dolor sit amet.</span>
-                </li>
-
-                <button type="submit" class="button button-block">Souscrire</button>
-        </div>
-    </section>
-
-<!-- Formulaire Log In lorsqu'on click sur bouton log in -->
-        <section id="LogIn">
-            <h2>LOG IN</h2>
+            <!-- Formulaire Log In lorsqu'on click sur bouton log in -->
             
-                <form action="/" method="post">
-          
-                      <div class="field-wrap">
-                        <label> Username </label>
-                        <input type="text" required autocomplete="off" />
-                      </div>
+            <section id="LogInForm">
+
+                <h3>LOG IN</h3>
                     
+                <form action="/" method="post">
+                
                     <div class="field-wrap">
-                      <label> Password </label>
-                      <input type="password"required autocomplete="off"/>
+                        <label> Email ou numéro de téléphone </label>
+                        <input type="email" required autocomplete="off" />
+                    </div>
+                            
+                    <div class="field-wrap">
+                        <label> Password </label>
+                        <input type="password"required autocomplete="off"/>
                     </div>
 
-                    <p class="forgot"><a href="#">Forgot Password?</a></p>
-                    
+                    <p class="forgot"><a href="#">Password oublié ?</a></p>
+                            
                     <button type="submit" class="button button-block">Connexion</button>
                 </form>
-        </section>
+            </section>
 
-<!-- Phrase d'accroche -->
-        <section id="Accroche">
-            <a href="#">Découvrir notre catalogue...</a> <br>
-              <a href="../html/sign_up.html">30 jours offerts avec l'abonnement PREMIUM.</a> 
-        </section>
+            <!-- Présentation des abonnements, click sur bouton sign up -->
 
-<!-- Footer -->
-    <footer>
-       <a href="#"><p>Nous connaître</p></a> 
-       <a href="#"><p>FAQ</p></a>
-        <section id="Réseaux">
-            <a href="#"><img src="../img/Icône Twitter.png" alt="Icône Twitter"></a>
-           <a href="#"><img src="../img/Icône Facebook.png" alt="Icône Facebook"></a>
-           <a href="#"><img src="../img/Icône Instagram.png" alt="Icône Instagram"></a> 
-        </section>
-        <a href="#"><p>Confidentialité</p></a>
-        <a href="#"><p>CGU</p></a> 
+            <section id="FenêtreAbonnements"> 
+                
+                <div id="AbonnementBasic">
 
-    </footer>
- 
+                    <h3>BASIC - 7€/MOIS</h3>
+                    
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+
+                    </div>
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>    
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+
+                    <button type="submit" class="button button-block">Souscrire</button>
+                </div>
+
+                <div id="AbonnementPremium">
+                    
+                     <h3>PREMIUM - 11€/MOIS</h3>
+
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>    
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked">
+                        <input type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+
+                    <button type="submit" class="button button-block">Souscrire</button>
+                </div>
+            </section>
+
+             <!-- Phrase d'accroche -->
+             <section id="Accroche">
+                    <a href="#">Découvrir notre catalogue ...</a> <br>
+                    <a href="../html/sign_up.html">30 jours offerts avec l'abonnement PREMIUM.</a> 
+            </section>
+
+             <!-- Footer -->
+            <footer>
+                <a href="#">Nous connaître</a> 
+                <a href="#">FAQ</a>
+                <section id="Réseaux">
+                    <a href="#"><img src="../img/Twitter.png" alt="Icône Twitter"></a>
+                    <a href="#"><img src="../img/Facebook.png" alt="Icône Facebook"></a>
+                    <a href="#"><img src="../img/Instagram.png" alt="Icône Instagram"></a> 
+                </section>
+                <a href="#">Confidentialité</a>
+                <a href="#">CGU</a> 
+            </footer>
+        </section>  
+
+
+<script>src="../jsBootstrap/bootstrap.js"</script>    
 </body>
 </html>
