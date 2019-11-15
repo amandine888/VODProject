@@ -75,41 +75,100 @@ h1{
     justify-content: center;
 }
 
+/* Abonnement Premium */
+
+#Premium {
+    display: none;
+    flex-direction: column;
+}
+
 #CheckIdentity{
     display: flex; 
     justify-content: space-around;
     font-size: 1vw;
+    padding-bottom:1vw;
 }
 
 #Premium h3 {
     border: 2px solid whitesmoke;
-    margin: 5vw 0 2vw 30vw;
-    padding: 3vw;
-    font-size: 1.5vw;
+    margin: 3vw 0 1vw 30vw;
+    padding: 2.5vw;
+    font-size: 1.4vw;
     text-align: center;
 }
 
 #Premium form{
-border: 4px solid red;
-margin-left: 30vw; 
-font-size: 1.5vw;
-padding: 20px;
+    box-shadow:0 2px 5px 2px #655B6C;
+    margin-left: 30vw; 
+    font-size: 1vw;
+    padding: 20px;
 }
 
-.field-wrap label{
+label{
     font-size: 1vw;
 }
 
-.field-wrap #one {
-    height: 2%;
+#LastSection{
+    margin-top: 0.8vw;
+    display: flex;
+    flex-direction: column;
 }
 
-#Terms{
-    font-size: 1vw;
+#LastSection a{
+    margin-bottom: 1vw;
 }
+
+/* Abonnement VIP */
 
 #VIP {
-    display: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#CheckIdentity2{
+    display: flex; 
+    justify-content: space-around;
+    font-size: 1vw;
+    padding-bottom:1vw;
+}
+
+#VIP h3 {
+    border: 2px solid whitesmoke;
+    margin: 3vw 0 1vw 30vw;
+    padding: 2.5vw;
+    font-size: 1.4vw;
+    text-align: center;
+}
+
+#VIP form{
+    box-shadow:0 2px 5px 2px #655B6C;
+    margin-left: 30vw; 
+    font-size: 1vw;
+    padding: 20px;
+}
+
+label{
+    font-size: 1vw;
+}
+
+#LastSection2{
+    margin-top: 0.8vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#LastSection2 a{
+    margin-bottom: 1vw;
+}
+
+/* Bouton Switch Abonnement */
+
+#Switch h3{
+    border: 2px solid whitesmoke;
+    margin: 7vw 0 0 2vw;
+    padding: 2vw;
+    font-size: 1.4vw;
+    text-align: center;
 }
 
 /* Footer */
