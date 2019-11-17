@@ -39,7 +39,7 @@ body{
 
 h1{
     font-family: 'Long Cang', cursive;
-    font-size: 5em;
+    font-size: 6vw;
     margin: 0; 
 }
   
@@ -47,15 +47,14 @@ h1{
     width: 60%;
     border-top: whitesmoke 1px solid;
     margin-left: 400px;
-    margin-top: -150px;
+    margin-top: -80px;
 }
 
 /* Boutons */
 
 #Boutons {
     display: flex; 
-    align-items: flex-end;
-    list-style: none;
+    margin-top: 2vw;
 }
 
 #Boutons #LogIn{
@@ -84,6 +83,10 @@ h1{
     transition: 1s ease;
 }
 
+#Boutons #LogIn{
+    padding: 0 2vw 0 2vw;
+}
+
 #Boutons #LogIn:hover {
     background: #655B6C;
     transition: 1s ease;
@@ -91,12 +94,29 @@ h1{
 
 /* Formulaires */
 
-/* Log In */
+/* Section ContainerLogIn */
+
+#ContainerLogIn {
+    width: 100%;
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Icône Fermeture */
+
+#Fermeture{
+    display: flex;
+    width: 4%;
+    margin-right: 30vw;
+}
+
+/* Formulaire de Log In */
 
 #LogInForm{
     width: 50%;
-    height: 60vh;
-    display: none;
+    height: 50vh;
+    display: flex;
     flex-direction: column;
     align-items: center; 
     box-shadow:0 2px 5px 2px #655B6C;
@@ -105,14 +125,19 @@ h1{
 h3{
     margin: 20px 0 20px 0;
     font-weight: 200;
+    font-size: 1.4vw;
 }
 
 form {
-    padding: 40px 0 40px 0; 
+    padding-top: 40px; 
+    font-size: 1vw;
+}
+
+.FormGroup {
+    margin-bottom: 2vw;
 }
 
 input{
-    display: block;
     color: whitesmoke;
     background-color: #0A0618;
     margin-bottom: 20px;
@@ -123,21 +148,37 @@ input:focus {
     transition: 1s ease;
 }
 
-#LogInForm p a {
-    color: #655B6C;
-    font-size: 0.8em;
+#Submit {
+    margin: 2vw;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+#Submit button{
+    color: whitesmoke;
+    margin-top: 2vw;
+    background: #19193D;
+    border: white 0.2px solid;
+    font-size: 1.2em;
+    padding: 0.7vw; 
+}
+
+#Submit button:hover {
+    background: #655B6C;
+    transition: 1s ease;
 }
 
 /* Section ContainerAbonnement */
 
 #ContainerAbonnement {
-    display: none; 
+    display: flex; 
     flex-direction: column;
 }
 /* Icône Fermeture */
 
-#MainPage #Fermeture{
-    display: none;
+#Fermeture2{
+    display: flex;
     width: 4%;
 }
 
@@ -147,14 +188,35 @@ input:focus {
     display: none;
 }
 
-#FenêtreAbonnements h3 {
-    margin-bottom: 30px;
+#AbonnementBasic{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+#AbonnementPremium{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+#AbonnementBasic #AbonnementPremium h3 {
+    font-size: 1.4vw;
     font-weight: 200;
 }
 
-.Checked {
-    display: flex; 
-    flex-direction: row;
+#AbonnementBasic h3{
+    margin: 2vw; 
+    text-align: center;
+}
+
+#AbonnementPremium h3 {
+    margin: 2vw; 
+    text-align: center;
+}
+
+.Checked{
+    margin:0.6vw; 
 }
 
 .Checked li {
@@ -173,6 +235,19 @@ input:focus {
     padding: 20px;
 }
 
+.Bouton button{
+    color: whitesmoke;
+    margin-top: 2vw;
+    background: #19193D;
+    border: white 0.2px solid;
+    font-size: 1.2em;
+    padding: 0.7vw; 
+}
+
+.Bouton button:hover {
+    background: #655B6C;
+    transition: 1s ease;
+}
 
 /* Phrase d'accroche */
 
@@ -181,7 +256,7 @@ input:focus {
     display: flex; 
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 10vw;
 }
 
 #Accroche a{

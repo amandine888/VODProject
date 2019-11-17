@@ -29,106 +29,110 @@
 
             <!-- Boutons -->
             <section id="Boutons"> 
-                <div id="LogIn" class="btn-lg rounded-0"><a href="#">LOG IN</a></div>
-                <div id="SignUp" class="btn-lg rounded-0"> <a href="#">SIGN UP</a></div>  
+                <button id="LogIn" class="btn-lg rounded-0"><a href="#">LOG IN</a></button>
+                <button id="SignUp" class="btn-lg rounded-0"> <a href="#">SIGN UP</a></button>  
             </section>
             
 
             <!-- Formulaire Log In lorsqu'on click sur bouton log in -->
-            
-            <section id="LogInForm">
+            <section id="ContainerLogIn">
                 <img id="Fermeture" src="../img/Icone Fermeture.png" alt="Icone de fermeture">
 
-                <h3>LOG IN</h3>
-                    
-                <form action="/" method="post">
-                
-                    <div class="field-wrap">
-                        <label> EMAIL OU NUMÉRO DE TELEPHONE </label>
-                        <input type="email" required autocomplete="off" />
-                    </div>
-                            
-                    <div class="field-wrap">
-                        <label> PASSWORD </label>
-                        <input type="password"required autocomplete="off"/>
-                    </div>
-
-                    <p class="forgot"><a href="#">Password oublié ?</a></p>
-                            
-                    <button type="submit" class="button button-block">Connexion</button>
-                </form>
+                <section id="LogInForm">
+                    <h3>LOG IN</h3>
+                        
+                    <form action="/" method="post">
+                        <div class="form-group">
+                            <div class="FormGroup">
+                                <label class="col-sm-5 col-form-label-sm"> EMAIL OU NUMÉRO DE TELEPHONE </label>
+                                <input type="email" class="form control form-control-sm mb-2 col-sm-6 " required autocomplete="off" />
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <div class="FormGroup">
+                                <label class="col-sm-5 col-form-label-sm"> PASSWORD </label>
+                                <input type="password" class="form control form-control-sm mb-2 col-sm-6 " required autocomplete="off"/>
+                            </div>
+                        </div>
+                        <div id="Submit">
+                            <p class="forgot"><a href="#">Password oublié ?</a></p>   
+                            <button type="submit" class="button button-block">Connexion</button>
+                        </div>
+                    </form>
+                </section>
             </section>
 
             <!-- Présentation des abonnements, click sur bouton sign up -->
         <section id="ContainerAbonnement">
-
-            <img id="Fermeture" src="../img/Icone Fermeture.png" alt="Icone de fermeture">
+            <img id="Fermeture2" src="../img/Icone Fermeture.png" alt="Icone de fermeture">
 
             <section id="FenêtreAbonnements"> 
-                
                 <div id="AbonnementBasic">
 
                     <h3>BASIC - 7€/MOIS</h3>
                     
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
-                        <label for="#">Lorem ipsum dolor sit amet.</label> 
-
-                    </div>
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
                         <label for="#">Lorem ipsum dolor sit amet.</label> 
                     </div>
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
                         <label for="#">Lorem ipsum dolor sit amet.</label> 
                     </div>
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
                         <label for="#">Lorem ipsum dolor sit amet.</label> 
                     </div>    
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
                         <label for="#">Lorem ipsum dolor sit amet.</label> 
                     </div>
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
                         <label for="#">Lorem ipsum dolor sit amet.</label> 
                     </div>
 
-                    <button type="submit" class="button button-block">Souscrire</button>
+                    <div class="Bouton">
+                        <button type="submit" class="btn-lg rounded-0">Souscrire</button>
+                    </div>
                 </div>
 
                 <div id="AbonnementPremium">
                     
                      <h3>PREMIUM - 11€/MOIS</h3>
 
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
                         <label for="#">Lorem ipsum dolor sit amet.</label> 
                     </div>
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
                         <label for="#">Lorem ipsum dolor sit amet.</label> 
                     </div>
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
                         <label for="#">Lorem ipsum dolor sit amet.</label> 
                     </div>    
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
                         <label for="#">Lorem ipsum dolor sit amet.</label> 
                     </div>
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
                         <label for="#">Lorem ipsum dolor sit amet.</label> 
                     </div>
-                    <div class="Checked">
-                        <input type="checkbox" name="check-box" checked />
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked />
                         <label for="#">Lorem ipsum dolor sit amet.</label> 
                     </div>
 
-                    <button type="submit" class="button button-block">Souscrire</button>
+                    <div class="Bouton">
+                        <button type="submit" class="button button-block">Souscrire</button>
+                    </div>
                 </div>
             </section>
 

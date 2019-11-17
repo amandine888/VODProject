@@ -104,14 +104,28 @@ h1{
     padding: 20px;
 }
 
-label{
-    font-size: 1vw;
+input{
+    background-color: #0A0618;
+    color: whitesmoke;
 }
 
 #LastSection{
     margin-top: 0.8vw;
     display: flex;
     flex-direction: column;
+}
+
+#LastSection button{
+    color: whitesmoke;
+    background: #19193D;
+    border: white 0.2px solid;
+    font-size: 1.2em;
+    padding: 0.7vw; 
+}
+
+#LastSection button:hover {
+    background: #655B6C;
+    transition: 1s ease;
 }
 
 #LastSection a{
@@ -147,14 +161,23 @@ label{
     padding: 20px;
 }
 
-label{
-    font-size: 1vw;
-}
-
 #LastSection2{
     margin-top: 0.8vw;
     display: flex;
     flex-direction: column;
+}
+
+#LastSection2 button{
+    color: whitesmoke;
+    background: #19193D;
+    border: white 0.2px solid;
+    font-size: 1.2em;
+    padding: 0.7vw; 
+}
+
+#LastSection2 button:hover {
+    background: #655B6C;
+    transition: 1s ease;
 }
 
 #LastSection2 a{
