@@ -109,6 +109,10 @@ input{
     color: whitesmoke;
 }
 
+#TermsTwo #TermsTwo2 {
+    font-size: 1vw;
+}
+
 #LastSection{
     margin-top: 0.8vw;
     display: flex;
@@ -126,10 +130,6 @@ input{
 #LastSection button:hover {
     background: #655B6C;
     transition: 1s ease;
-}
-
-#LastSection a{
-    margin-bottom: 1vw;
 }
 
 /* Abonnement VIP */
@@ -159,6 +159,14 @@ input{
     margin-left: 30vw; 
     font-size: 1vw;
     padding: 20px;
+}
+
+#TermsTwo label a{
+    font-size: 0.8vw;
+}
+
+#TermsTwo2 label {
+    font-size: 0.8vw;
 }
 
 #LastSection2{

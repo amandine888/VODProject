@@ -172,7 +172,7 @@ input:focus {
 /* Section ContainerAbonnement */
 
 #ContainerAbonnement {
-    display: flex; 
+    display: none; 
     flex-direction: column;
 }
 /* Icône Fermeture */
@@ -185,7 +185,7 @@ input:focus {
 /* Présentation des abonnements */
  
 #FenêtreAbonnements {
-    display: none;
+    display: flex;
 }
 
 #AbonnementBasic{
@@ -237,7 +237,7 @@ input:focus {
 
 .Bouton button{
     color: whitesmoke;
-    margin-top: 2vw;
+    margin-top: 1vw;
     background: #19193D;
     border: white 0.2px solid;
     font-size: 1.2em;
