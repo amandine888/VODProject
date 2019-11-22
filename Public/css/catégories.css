@@ -6,6 +6,7 @@ body{
 	color: whitesmoke;
 	background: #0A0618;
 	font-family: 'Maven Pro', sans-serif;
+	min-height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -33,14 +34,14 @@ background:#FFFFFF;
 header{
 	background: #19193D;
 	width: 100%;
-	height: 90px;
+	height: 6.5vw;
 	display: flex;
 	flex-wrap: wrap;
 }
 
 header h1{
 	font-family: 'Long Cang', cursive;
-	font-size: 80px;
+	font-size: 5.8vw;
 	font-weight: lighter;
 
 }
@@ -55,15 +56,21 @@ nav ul{
 	justify-content: space-around;
 	width: 100%;
 	font-weight: 500;
-	font-size: 20px;
-	margin-top: 7px;
+	font-size: 1.5vw;
+	margin-top: 0.5vw;
+	box-sizing: border-box;
 
 }
 
 a{
 	text-decoration: none;
 	color: white;
+}
 
+a:hover{
+	text-decoration-line: line-through;
+	text-decoration: none;
+	color: white;
 }
 
 li{
@@ -76,7 +83,6 @@ header nav{
 	width: 96%;
 	height: 100%;
 	display: flex;
-
 }
 
 .icone{
@@ -88,19 +94,19 @@ header nav{
 }
 
 .icone img{
-	width: 30px;
-	height: 30px;
+	width: 2.1vw;
+	height: 2.1vw;
 }
 
 #listeuser{
 	width: 10%;
-	height: 150px;
+	height: 10.9vw;
 	border: 2px solid #0A0618;
 	/*border-radius: 15%;*/
 	position: absolute;
-	right: 50px;
+	right: 3.6vw;
 	float: right;
-	top:30px;
+	top:2.1vw;
 	background: rgba(101, 91, 108, 0.95);
 
 	display: none;
@@ -113,7 +119,7 @@ header nav{
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	line-height: 20px;
+	line-height: 1.4vw;
 }
 
 
@@ -121,30 +127,32 @@ header nav{
 
 .titre{
 	width: 100%;
-	height: 100px;
+	height: 7.3vw;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 3vw;
 }
 
 #buttonreturn{
-	width: 35px;
-	height: 35px;
-	margin-left: 50px;
+	width: 2.5vw;
+	height: 2.5vw;
+	margin-left: 3.6vw;
 }
 
 #search {
 	background:#655B6C;
-	width: 150px;
-	height: 30px;
-	margin-right: 50px;
+	width: 10.9vw;
+	height: 2.1vw;
+	margin-right: 3.6vw;
 }
 
 input[type=search] {
 	background: #555 url(http://hp-proliant.co.uk/qual_images/mob-search-icon.png) no-repeat 9px center;
 	border: solid 1px #0A0618;
 	padding: 9px 10px 9px 32px;
-	width: 55px;
+	width: 4vw;
+	font-size:1vw;
 }
 
 ::placeholder{
@@ -153,7 +161,7 @@ input[type=search] {
 }
 
 input[type=search]:focus {
-	width: 600px;
+	width: 43.9vw;
 	background-color: #ccc;
 	border-color: #333;
 	border: solid 1px #fff;
@@ -165,25 +173,24 @@ hr{
 	color: white;
 	width: 52%;
 	margin-left: 0;
-	margin-bottom: 65px;
+	margin-bottom: 4.7vw;
 	height: -2px;
+	border: 0.5px solid white;
 }
 
-#films {
+#cat {
 	text-align: center;
 	font-weight: 100;
 }
 
 
 #ligneverticale{
-	height: 500px;
-	width: 1px;
+	height: 36.6vw;
 	float: left;
 	position:relative;
-	bottom: 150px;
-	left: 40px;
-	/*display: inline-block;*/
-	border-right: 1px solid white;
+	bottom: 10.9vw;
+	left: 2.9vw;
+	border: 0.5px solid white;
 }
 
 
@@ -192,7 +199,7 @@ hr{
 
 .videos{
 	width: 90%;
-	height: 600px;
+	height: 43.9vw;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -203,7 +210,7 @@ hr{
 .videos div{
 	box-sizing: border-box;
 	width: 27%;
-	height: 210px;
+	height: 15.3vw;
 	border: 1px solid black;
 
 }
@@ -215,29 +222,88 @@ hr{
 
 .listecatégories ul{
 	justify-content: center;
-	line-height: 60px;
-	font-size: 25px;
-	padding-left: : 13px;
+	line-height: 4.3vw;
+	font-size: 1.8vw;
+	padding-left: : 0.9vw;
 }
 
 .listecatégories ul li{
 	justify-content: flex-start;
 }
 
-.middle{
+
+.middlefilms{
 	display: flex;
-	/*flex-wrap: wrap;*/
+}
+
+.middleanimes{
+	display: none;
+}
+
+.middleseries{
+	display: none;
+}
+
+.middlerealisateurs{
+	display: none;
 }
 
 
+nav li a:hover{
+	border:1px solid white;
+}
 
 /*footer*/
 
 footer{
-	min-height: 200px;
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    margin-top: 3.2vw;
+    margin-right: 2.5vw;
+    position:relative;
+    bottom: 0;
+}
+
+.LiensUtiles{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer #Réseaux {
+    display: flex; 
+    justify-content: space-around;
+}
+
+footer #Réseaux img{
+    width: 50%
+}
+
+footer a {
+    color: whitesmoke;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 
+.selected{
+	border: 1px solid whitesmoke;
+	}
 
 
 
+@media screen and (max-width: 1050px){
+
+
+}
