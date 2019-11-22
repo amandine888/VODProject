@@ -15,7 +15,7 @@ $(document).ready(function(){
     $("#Boutons #SignUp").on("click",function(){
         $("#Accroche, #LogIn, #SignUp").css("display", "none");
         $("#ContainerAbonnement").css("display", "flex"); 
-        $("#MainPage #line").css({"-webkit-transform":"translateY(40px)"})
+        $("#MainPage #line").css({"-webkit-transform":"translateY(52px)"})
     })
 
     $("#ContainerAbonnement #Fermeture2").on("click",function(){
@@ -23,6 +23,8 @@ $(document).ready(function(){
         $("#Accroche, #LogIn, #SignUp").css("display", "flex");
         $("#MainPage #line").css({"-webkit-transform":"translateY(0px)"})
     })
+
+
     
 
 })
