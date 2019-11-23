@@ -175,7 +175,7 @@ hr{
 	margin-left: 0;
 	margin-bottom: 4.7vw;
 	height: -2px;
-	border: 0.5px solid white;
+	border: 0.03vw solid white;
 }
 
 #cat {
@@ -190,7 +190,7 @@ hr{
 	position:relative;
 	bottom: 10.9vw;
 	left: 2.9vw;
-	border: 0.5px solid white;
+	border: 0.05vw solid white;
 }
 
 
