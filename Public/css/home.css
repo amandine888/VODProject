@@ -46,8 +46,8 @@ h1{
 #line {
     width: 60%;
     border-top: whitesmoke 1px solid;
-    margin-left: 400px;
-    margin-top: -80px;
+    margin-left: 27.2vw;
+    margin-top: -5.55vw;
 }
 
 /* Boutons */
@@ -59,16 +59,16 @@ h1{
 
 #Boutons #LogIn{
     background: #19193D; 
-    font-size: 1.875em;
-    padding: 20px; 
+    font-size: 2.083vw;
+    padding: 1.38vw; 
     border: none;
 }
 
 #Boutons #SignUp{
     background: #19193D;
-    font-size: 1.875em;
-    padding: 20px; 
-    margin-left: 120px;
+    font-size: 2.083vw;
+    padding: 1.38vw; 
+    margin-left: 8.33vw;
     border: none;
 }
 
@@ -301,17 +301,17 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center; 
-    box-shadow:0 2px 5px 2px #655B6C;
+    border: 1px solid whitesmoke;
 }
 
 h3{
-    margin: 20px 0 20px 0;
+    margin: 1.38vw 0 1.38vw 0;
     font-weight: 200;
     font-size: 1.4vw;
 }
 
 form {
-    padding-top: 40px; 
+    padding-top: 2.77vw; 
     font-size: 1vw;
 }
 
@@ -322,13 +322,13 @@ form {
 input{
     color: whitesmoke;
     background-color: #0A0618;
-    margin-bottom: 20px;
+    margin-bottom: 1.38vw;
 }
 
-input:focus {
+/* input:focus {
     border: #19193D; 
     transition: 1s ease;
-}
+} */
 
 #Submit {
     margin: 2vw;
@@ -342,7 +342,7 @@ input:focus {
     margin-top: 2vw;
     background: #19193D;
     border: white 0.2px solid;
-    font-size: 1.2em;
+    font-size: 1.33vw;
     padding: 0.7vw; 
 }
 
@@ -407,14 +407,14 @@ input:focus {
 
 #AbonnementBasic{
     box-shadow:0 2px 5px 2px #655B6C;
-    margin-right: 20px;
-    padding: 20px;
+    margin-right: 1.38vw;
+    padding: 1.38vw;
 }
 
 #AbonnementPremium {
     box-shadow:0 2px 5px 2px #655B6C;
-    margin-left: 20px;
-    padding: 20px;
+    margin-left: 1.38vw;
+    padding: 1.38vw;
 }
 
 .Bouton button{
@@ -422,7 +422,7 @@ input:focus {
     margin-top: 1vw;
     background: #19193D;
     border: white 0.2px solid;
-    font-size: 1.2em;
+    font-size: 1.33vw;
     padding: 0.7vw; 
 }
 
@@ -442,7 +442,7 @@ input:focus {
 }
 
 #Accroche a{
-    font-size: 1.5em;
+    font-size: 1.66vw;
     color: whitesmoke;
     text-decoration: underline;
 }
@@ -453,8 +453,7 @@ footer{
     display: flex; 
     flex-direction: column;
     width: 100%;
-    /* margin-top: 250px; */
-    margin-right: 35px;
+    margin-right: 2.43vw;
 }
 
 .LiensUtiles{
@@ -473,19 +472,27 @@ footer #Réseaux img{
 
 footer a {
     color: whitesmoke;
-    font-size: 1.2em;
+    font-size: 1.33vw;
     text-decoration: none;
 }
 
 footer p {
     text-align: center;
-    font-size: 0.8em;
-    margin-top: 10px;
+    font-size: 0.88vw;
+    margin-top: 0.69vw;
 }
 
 footer a:hover {
     text-decoration: none;
     color: whitesmoke;
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 320px){
+
 }
 
 

@@ -42,7 +42,7 @@ h1{
     width: 200%;
     height: 30vh;
     border-top: whitesmoke 1px solid; 
-    margin-left: 100px;
+    margin-left: 6.94vw;
 }
 
 /* Bouton Log In dans Header */
@@ -78,7 +78,7 @@ h1{
 /* Abonnement Premium */
 
 #Premium {
-    display: none;
+    display: flex;
     flex-direction: column;
 }
 
@@ -92,7 +92,7 @@ h1{
 #Premium h3 {
     border: 2px solid whitesmoke;
     margin: 3vw 0 1vw 30vw;
-    padding: 2.5vw;
+    padding: 2vw 2.5vw 2vw 2.5vw;
     font-size: 1.4vw;
     text-align: center;
 }
@@ -123,7 +123,7 @@ input{
     color: whitesmoke;
     background: #19193D;
     border: white 0.2px solid;
-    font-size: 1.2em;
+    font-size: 1.33vw;
     padding: 0.7vw; 
 }
 
@@ -135,7 +135,7 @@ input{
 /* Abonnement VIP */
 
 #VIP {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -149,7 +149,7 @@ input{
 #VIP h3 {
     border: 2px solid whitesmoke;
     margin: 3vw 0 1vw 30vw;
-    padding: 2.5vw;
+    padding: 2vw 2.5vw 2vw 2.5vw;
     font-size: 1.4vw;
     text-align: center;
 }
@@ -179,7 +179,7 @@ input{
     color: whitesmoke;
     background: #19193D;
     border: white 0.2px solid;
-    font-size: 1.2em;
+    font-size: 1.33vw;
     padding: 0.7vw; 
 }
 
@@ -226,12 +226,20 @@ footer #Réseaux img{
 
 footer a {
     color: whitesmoke;
-    font-size: 1.2em;
+    font-size: 1.33vw;
     text-decoration: none;
 }
 
 footer p {
     text-align: center;
-    font-size: 0.8em;
-    margin-top: 10px;
+    font-size: 0.88vw;
+    margin-top: 0.69vw;
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 320px){
+
 }
