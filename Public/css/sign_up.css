@@ -75,9 +75,9 @@ h1{
     justify-content: center;
 }
 
-/* Abonnement Premium */
+/* Abonnement Basic */
 
-#Premium {
+#Basic {
     display: flex;
     flex-direction: column;
 }
@@ -89,7 +89,7 @@ h1{
     padding-bottom:1vw;
 }
 
-#Premium h3 {
+#Basic h3 {
     border: 2px solid whitesmoke;
     margin: 3vw 0 1vw 30vw;
     padding: 2vw 2.5vw 2vw 2.5vw;
@@ -97,7 +97,7 @@ h1{
     text-align: center;
 }
 
-#Premium form{
+#Basic form{
     box-shadow:0 2px 5px 2px #655B6C;
     margin-left: 30vw; 
     font-size: 1vw;
@@ -132,9 +132,9 @@ input{
     transition: 1s ease;
 }
 
-/* Abonnement VIP */
+/* Abonnement Premium */
 
-#VIP {
+#Premium{
     display: none;
     flex-direction: column;
 }
@@ -146,7 +146,7 @@ input{
     padding-bottom:1vw;
 }
 
-#VIP h3 {
+#Premium h3 {
     border: 2px solid whitesmoke;
     margin: 3vw 0 1vw 30vw;
     padding: 2vw 2.5vw 2vw 2.5vw;
@@ -154,7 +154,7 @@ input{
     text-align: center;
 }
 
-#VIP form{
+#Premium form{
     box-shadow:0 2px 5px 2px #655B6C;
     margin-left: 30vw; 
     font-size: 1vw;
