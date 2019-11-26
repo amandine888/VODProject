@@ -109,8 +109,12 @@ input{
     color: whitesmoke;
 }
 
-#TermsTwo #TermsTwo2 {
-    font-size: 1vw;
+#Terms label a{
+    font-size: 0.8vw;
+}
+
+#Terms2 label{
+    font-size: 0.8vw;
 }
 
 #LastSection{
@@ -131,6 +135,7 @@ input{
     background: #655B6C;
     transition: 1s ease;
 }
+
 
 /* Abonnement Premium */
 
@@ -198,7 +203,7 @@ input{
     border: 2px solid whitesmoke;
     margin: 7vw 0 0 2vw;
     padding: 2vw;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     text-align: center;
 }
 
