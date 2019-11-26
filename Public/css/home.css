@@ -35,6 +35,10 @@ body{
     height: 100vh;
 }
 
+#oui{
+    display: flex;
+}
+
 /* Header */
 
 h1{
