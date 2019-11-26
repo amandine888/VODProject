@@ -71,6 +71,7 @@ a:hover{
 	text-decoration-line: line-through;
 	text-decoration: none;
 	color: white;
+	cursor: pointer;
 }
 
 li{
@@ -247,6 +248,7 @@ hr{
 .middlerealisateurs{
 	display: none;
 }
+
 
 
 nav li a:hover{
