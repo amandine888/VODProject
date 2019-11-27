@@ -24,6 +24,10 @@ $(document).ready(function(){
         $("#MainPage #line").css({"-webkit-transform":"translateY(0px)"})
     })
 
+    // $("#Boutons #LogIn").on("click", function(){
+    //     window.location = "catégories.html"
+    // })
+
 
     
 

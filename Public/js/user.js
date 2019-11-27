@@ -11,5 +11,5 @@ class User {
 
     getUsername() { return this.username}
     getEmail (){ return this.email}
-    getPassword () {return this.password}
+    getPassword () { return this.password}
 }
