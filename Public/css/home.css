@@ -21,6 +21,10 @@ body{
     overflow: auto;
 }
 
+/* ::-webkit-scrollbar{
+    width: 5px;
+} */
+
 #Teaser img{
     width: 88%;
 }
@@ -34,10 +38,6 @@ body{
     justify-content: space-between;
     width: 65%;
     height: 100vh;
-}
-
-#oui{
-    display: flex;
 }
 
 /* Header */

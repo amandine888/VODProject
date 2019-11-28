@@ -42,7 +42,7 @@ window.onload = function() {
         })
 
         
-    submitPremium.addEventListener("click", function(){
+    submitPremium.addEventListener("click", function(event){
             event.preventDefault();
             let username2 = premiumForm[3].value; 
             console.log(username2); 
@@ -66,6 +66,5 @@ window.onload = function() {
                     console.log(data.errors) });
         })
     
-        // var newuser = new User ()
     
     }

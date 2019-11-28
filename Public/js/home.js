@@ -1,4 +1,4 @@
-$(document).ready(function(){
+window.onload = function() {
 
     $("#Boutons #LogIn").on("click",function(){
         $("#Accroche, #LogIn, #SignUp").css("display", "none");
@@ -24,11 +24,29 @@ $(document).ready(function(){
         $("#MainPage #line").css({"-webkit-transform":"translateY(0px)"})
     })
 
-    // $("#Boutons #LogIn").on("click", function(){
-    //     window.location = "catégories.html"
-    // })
-
-
+    const logInForm = document.getElementById("typeForm");  
+    const boutonLog = document.getElementById("BoutonLogIn");            
     
 
+    boutonLog.addEventListener("click", function(event){
+        event.preventDefault();
+
+        let email = logInForm[0].value; 
+            console.log(email); 
+
+        let password = logInForm[1].value; 
+            console.log(password);     
+        
+
+        $.post("https://brianboudrioux.fr/simplon/api/connect", { email: email, password: password}, function(data, status) {
+            event.preventDefault();
+            console.log(status);
+            if (data.auth == true){
+                window.location.href = "sign_up.html"}
+            else
+                console.log(data.errors)
+
+            });
+        
 })
+}
