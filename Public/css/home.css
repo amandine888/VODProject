@@ -15,18 +15,30 @@ body{
 
 #Teaser {
     height:100vh;
-    width: 35%;
+    width: 32%;
     display: flex;
     flex-direction: column;
     overflow: auto;
 }
 
-/* ::-webkit-scrollbar{
-    width: 5px;
-} */
+#teaser1 {
+    width: 100%;
+    height: 40vh; 
+}
 
-#Teaser img{
-    width: 88%;
+#teaser2 {
+    width: 100%;
+    height: 40vh; 
+}
+
+#teaser3 {
+    width: 100%;
+    height: 40vh; 
+}
+
+#teaser4 {
+    width: 100%;
+    height: 40vh; 
 }
 
 /* Main Page */

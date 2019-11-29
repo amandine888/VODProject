@@ -24,6 +24,24 @@ window.onload = function() {
         $("#MainPage #line").css({"-webkit-transform":"translateY(0px)"})
     })
 
+    $.get("https://brianboudrioux.fr/simplon/api/products/5dc00d241192ac774b019fed", function(data, status) {
+        console.log(data.media);
+        $("#teaser1").attr("src", data.media)});
+
+    $.get("https://brianboudrioux.fr/simplon/api/products/5dc00df61192ac774b019fef", function(data, status) {
+        console.log(data.media);
+        $("#teaser2").attr("src", data.media)});
+
+    $.get("https://brianboudrioux.fr/simplon/api/products/5dc00f4b1192ac774b019ff0", function(data, status) {
+        console.log(data.media);
+        $("#teaser3").attr("src", data.media)});    
+
+    $.get("https://brianboudrioux.fr/simplon/api/products/5dc002ec1192ac774b019fe4", function(data, status) {
+        console.log(data.media);
+        $("#teaser4").attr("src", data.media)});   
+
+    // Requête post log in : 
+
     const logInForm = document.getElementById("typeForm");  
     const boutonLog = document.getElementById("BoutonLogIn");            
     
@@ -47,8 +65,8 @@ window.onload = function() {
                 localStorage.setItem("email", email)
                 window.location = "sign_up.html"; }
 
-                else {
-                    alert('Account does not exist, please register');}
+            else {
+                alert('Account does not exist, please register');}
         })
     })
 }
