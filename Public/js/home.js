@@ -35,18 +35,20 @@ window.onload = function() {
             console.log(email); 
 
         let password = logInForm[1].value; 
-            console.log(password);     
-        
+            console.log(password);    
+            
 
         $.post("https://brianboudrioux.fr/simplon/api/connect", { email: email, password: password}, function(data, status) {
             event.preventDefault();
-            console.log(status);
-            if (data.auth == true){
-                window.location.href = "sign_up.html"}
-            else
-                console.log(data.errors)
+            console.log(data);
 
-            });
-        
-})
+            if (data.auth == true){
+
+                localStorage.setItem("email", email)
+                window.location = "sign_up.html"; }
+
+                else {
+                    alert('Account does not exist, please register');}
+        })
+    })
 }
