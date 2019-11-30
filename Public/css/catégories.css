@@ -43,8 +43,8 @@ header h1{
 	font-family: 'Long Cang', cursive;
 	font-size: 5.8vw;
 	font-weight: lighter;
-
 }
+
 
 nav ul{
 	display: flex;
@@ -62,15 +62,30 @@ nav ul{
 
 }
 
+
+#misora{
+	box-sizing: border-box;
+}
+
 a{
 	text-decoration: none;
 	color: white;
 }
 
-#buttonreturn, a:hover, #misora{
-	text-decoration-line: line-through;
-	text-decoration: none;
+/*.listecatégories li:hover{
+	text-decoration: line-through;
+}
+*/
+.listecatégories li:hover{
+	/*text-decoration: line-through;
+	text-decoration-thickness: 3px;*/
+	border-bottom: solid;
+	border-bottom-width: 0.1vw;
 	color: white;
+	cursor: pointer;
+}
+
+#misora, #buttonreturn, header li{
 	cursor: pointer;
 }
 
@@ -103,13 +118,11 @@ header nav{
 	width: 10%;
 	height: 10.9vw;
 	border: 2px solid #0A0618;
-	/*border-radius: 15%;*/
 	position: absolute;
 	right: 3.6vw;
 	float: right;
 	top:2.1vw;
 	background: rgba(101, 91, 108, 0.95);
-
 	display: none;
 
 }
@@ -186,7 +199,7 @@ hr{
 
 
 #ligneverticale{
-	height: 36.6vw;
+	height: 42vw;
 	float: left;
 	position:relative;
 	bottom: 10.9vw;
@@ -204,7 +217,8 @@ hr{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 
 }
 
@@ -230,6 +244,7 @@ hr{
 
 .listecatégories ul li{
 	justify-content: flex-start;
+	width: 75%;
 }
 
 
@@ -253,23 +268,31 @@ hr{
 
 nav li a:hover{
 	border:1px solid white;
+		box-sizing: border-box;
+
 }
 
 /*footer*/
 
 footer{
+	height: 3vw;
     display: flex; 
     flex-direction: column;
     width: 100%;
     margin-top: 3.2vw;
-    margin-right: 2.5vw;
+    /*margin-right: 2.5vw;*/
     position:relative;
     bottom: 0;
 }
 
 .LiensUtiles{
+	height: 100%;
     display: flex;
     justify-content: space-around;
+}
+
+footer p{
+	margin: 0;
 }
 
 footer #Réseaux {
@@ -278,7 +301,7 @@ footer #Réseaux {
 }
 
 footer #Réseaux img{
-    width: 50%
+    width: 50%;
 }
 
 footer a {
@@ -294,7 +317,7 @@ footer p {
 }
 
 footer a:hover {
-    text-decoration: none;
+    border-bottom: none;
     color: whitesmoke;
 }
 
@@ -303,9 +326,23 @@ footer a:hover {
 	border: 1px solid whitesmoke;
 	}
 
+.ligne{
+	border-bottom: solid;
+	border-bottom-width: 0.1vw;
+	color: white;
+}
 
 
-@media screen and (max-width: 1050px){
 
 
+@media screen and (max-width: 770px /*and max-height: 1368px*/){
+
+header h1 {
+	font-size: 55px;
+}
+
+
+header{
+	overflow: auto;
+}
 }
