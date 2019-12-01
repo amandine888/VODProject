@@ -5,14 +5,29 @@ window.onload = function() {
         if ($("#Premium").css ("display")==="none"){
             $("#Premium").css("display", "flex"); 
             $("#Basic").css("display", "none"); 
-            $("#Switch h3").text("Switch pour l'abonnement Basic - 7€/mois"); 
+            $("#Switch h3").text("Cliquez pour l'abonnement Basic - 7€/mois"); 
         }
         else{
             $("#Basic").css("display", "flex");
             $("#Premium").css("display", "none"); 
-            $("#Switch h3").text("Switch pour l'abonnement Premium - 11€/mois")
+            $("#Switch h3").text("Cliquez pour l'abonnement Premium - 11€/mois")
         }
     })
+
+    $('[data-toggle="tooltip"]').tooltip(); 
+
+    $("#HeaderContainer img, #HeaderContainer #LogIn").on("click", function(){
+        window.location.href = "index.html"
+    })
+
+
+    // $("#LogIn").mouseover(function(){
+    //     $(this).addClass("border"); 
+    // })
+
+    // $("#LogIn").mouseleave(function(){
+    //     $(this).removeClass("border"); 
+    // })
 
     const submitBasic = document.getElementById("BoutonBasic"); 
     const basicForm = document.getElementById("BasicFormulaire"); 

@@ -1,5 +1,7 @@
 window.onload = function() {
 
+    $('[data-toggle="tooltip"]').tooltip(); 
+
     $("#Boutons #LogIn").on("click",function(){
         $("#Accroche, #LogIn, #SignUp").css("display", "none");
         $("#ContainerLogIn").css("display", "flex"); 
@@ -63,7 +65,7 @@ window.onload = function() {
             if (data.auth == true){
 
                 localStorage.setItem("email", email)
-                window.location = "sign_up.html"; }
+                window.location.href = "sign_up.html"; }
 
             else {
                 alert('Account does not exist, please register');}

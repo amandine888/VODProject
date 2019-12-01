@@ -19,7 +19,6 @@ body{
     align-items: flex-start;
     justify-content: space-between;
     height: 10vh;
-    /* background:#19193D; */
 }
 
 #Entête{
@@ -29,7 +28,7 @@ body{
 }
 
 #HeaderContainer img{
-    width: 3%;
+    width: 4%;
     margin: 1vw 0 0 3vw;
 }
 
@@ -48,11 +47,14 @@ h1{
 /* Bouton Log In dans Header */
 
 #LogIn{
+    position: relative;
     background: #19193D;
-    border: white 0.2px solid;
-    font-size: 2vw;
+    border: none; 
+    font-size: 1.6vw;
     list-style: none;
     margin: 1vw 3vw 0 0;
+    padding: 0.8vw;
+    cursor: pointer;
 }
 
 #LogIn a {
@@ -61,10 +63,40 @@ h1{
     text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.8);
 }
 
-#LogIn:hover {
+/* Border X get width  */
+.borderXwidth a:before, .borderXwidth a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+.borderXwidth a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+.borderXwidth a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+.borderXwidth a:hover:before, .borderXwidth a:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
+
+/* #LogIn:hover {
     background: #655B6C;
     transition: 1s ease;
-}
+} */
 
 /* Formulaires */
 
@@ -100,13 +132,21 @@ h1{
 #Basic form{
     box-shadow:0 2px 5px 2px #655B6C;
     margin-left: 30vw; 
-    font-size: 1vw;
     padding: 20px;
+}
+
+.required{
+    font-size: 1vw; 
+    color:#655B6C;
 }
 
 input{
     background-color: #0A0618;
     color: whitesmoke;
+}
+
+::placeholder{
+    font-size: 0.9vw;
 }
 
 #Terms label a{
@@ -136,6 +176,10 @@ input{
     transition: 1s ease;
 }
 
+small{
+    font-size: 0.8vw;
+}
+
 
 /* Abonnement Premium */
 
@@ -162,7 +206,6 @@ input{
 #Premium form{
     box-shadow:0 2px 5px 2px #655B6C;
     margin-left: 30vw; 
-    font-size: 1vw;
     padding: 20px;
 }
 
@@ -200,11 +243,41 @@ input{
 /* Bouton Switch Abonnement */
 
 #Switch h3{
+    position: relative;
     border: 2px solid whitesmoke;
-    margin: 7vw 0 0 2vw;
+    margin: 5vw 0 0 2vw;
     padding: 2vw;
     font-size: 1.2vw;
     text-align: center;
+    cursor: pointer;
+}
+
+/* Pull right and left  */
+.pullRightLeft h3:before, .pullRightLeft h3:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.2;
+    transition: all 0.3s;
+}
+
+.pullRightLeft h3:before
+{
+    left: 0px;
+} 
+
+.pullRightLeft h3:after
+{
+    right: 0px;
+}
+
+.pullRightLeft h3:hover:before, .pullRightLeft h3:hover:after
+{
+    width: 100%;
 }
 
 /* Footer */
@@ -226,19 +299,23 @@ footer #Réseaux {
 }
 
 footer #Réseaux img{
-    width: 50%
+    width: 50%;
 }
 
 footer a {
     color: whitesmoke;
-    font-size: 1.33vw;
+    font-size: 1.2vw;
+}
+
+footer a:hover {
     text-decoration: none;
+    color:#655B6C;;
 }
 
 footer p {
     text-align: center;
-    font-size: 0.88vw;
-    margin-top: 0.69vw;
+    font-size: 0.6vw;
+    margin-top: 2vw;
 }
 
 @media (max-width: 768px){
