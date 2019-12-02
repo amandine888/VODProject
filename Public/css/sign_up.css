@@ -245,7 +245,7 @@ small{
 #Switch h3{
     position: relative;
     border: 2px solid whitesmoke;
-    margin: 5vw 0 0 2vw;
+    margin: 7vw 0 0 2vw;
     padding: 2vw;
     font-size: 1.2vw;
     text-align: center;
@@ -299,7 +299,7 @@ footer #Réseaux {
 }
 
 footer #Réseaux img{
-    width: 50%;
+    width: 3vw;
 }
 
 footer a {
@@ -315,13 +315,13 @@ footer a:hover {
 footer p {
     text-align: center;
     font-size: 0.6vw;
-    margin-top: 2vw;
+    margin-top: 1vw;
 }
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
 
 }
 
-@media (max-width: 320px){
+@media screen and (max-width: 320px){
 
 }
