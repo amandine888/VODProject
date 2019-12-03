@@ -11,8 +11,9 @@
     <link rel="stylesheet" type="text/css" href="Public/css/catégories.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
     <script type="text/javascript" src="Public/js/catégories.js"></script>
+
 
 </head>
 
@@ -21,10 +22,10 @@
 	<header>
 		<nav>
 			<ul>
-				<li id='categoriesfilms'><a>Films</a></li>
-				<li id="categoriesseries"><a>Séries</a></li>
+				<li id='categoriesfilms' class="un"> <a>Films</a></li>
+				<li id="categoriesseries" class="un"><a>Séries</a></li>
 				<li id="misora"><h1>Misora</h1></li>
-				<li id="categoriesanimes"><a>Animés</a></li>
+				<li id="categoriesanimes" class="un"><a>Animés</a></li>
 				<div id="listeuser">
 					<ul>
 						<li><a href="default.asp">Profil</a></li>
@@ -32,7 +33,7 @@
 						<li><a href="default.asp">Deconnexion</a></li>
 					</ul>
 				</div>
-				<li id="categoriesrealisateurs"><a>Réalisateurs</a></li>
+				<li id="categoriesrealisateurs" class="un"><a>Réalisateurs</a></li>
 			</ul>
 		</nav>	
 
@@ -45,7 +46,7 @@
 
 		<!-- retour et icones -->
 	<section class="titre">
-		<a href="default.asp"><img id="buttonreturn" src="Public/img/return.png"></a>
+		<img id="buttonreturn" src="Public/img/return.png">
 		
 		<input  type="search" id="search" placeholder="Rechercher" name="q"
 		       aria-label="Search through site content">
@@ -64,14 +65,6 @@
 		<section class="videos vidfilms">
 			
 			
-			<!-- <div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div> -->
 		</section>
 
 
@@ -79,10 +72,10 @@
 			<!-- catégories a droite -->
 	<section class="listecatégories">
 		<ul>
-			<li><a id="filmsaction">Action</a></li>
-			<li id="filmscomedie"><a>Comédie</a></li>
-			<li><a id="filmshorreur">Horreur</a></li>
-			<li><a id="filmsSF">Science-Fiction</a></li>
+			<li id="filmsaction">Action</li>
+			<li id="filmscomedie">Comédie</li>
+			<li id="filmshorreur">Horreur</li>
+			<li id="filmsSF">Science-Fiction</li>
 		</ul>
 	</section>
 
@@ -94,15 +87,7 @@
 		<div id="ligneverticale"></div>
 		<section class="videos vidseries">
 			
-			<!-- <div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%" ></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div> -->
+			
 		</section>
 
 
@@ -110,10 +95,10 @@
 			<!-- catégories a droite -->
 	<section class="listecatégories">
 		<ul>
-			<li  id="seriesaction">Action</li>
-			<li><a id="seriescomedie">Comédie</a></li>
-			<li><a id="serieshorreur">Horreur</a></li>
-			<li><a id="seriesSF">Science-Fiction</a></li>
+			<li id="seriesaction">Action</li>
+			<li id="seriescomedie">Comédie</li>
+			<li id="serieshorreur">Horreur</li>
+			<li id="seriesSF">Science-Fiction</li>
 		</ul>
 	</section>
 
@@ -125,15 +110,7 @@
 		<div id="ligneverticale"></div>
 		<section class="videos vidanimes">
 			
-			<!-- <div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%" ></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div> -->
+			
 		</section>
 
 
@@ -141,12 +118,11 @@
 			<!-- catégories a droite -->
 	<section class="listecatégories">
 		<ul>
-			<li><a id="films">Action</a></li>
-			<li><a id="films">Aventure</a></li>
-			<li><a id="films">Comédie</a></li>
-			<li><a id="films">Fantastique</a></li>
-			<li><a id="films">Horreur</a></li>
-			<li><a id="films">Sport</a></li>
+			<li id="animesaction">Action</li>
+			<li id="animesaventure">Aventure</li>
+			<li id="animescomedie">Comédie</li>
+			<li id="animesSF">Fantastique</li>
+			
 		</ul>
 	</section>
 
@@ -158,15 +134,7 @@
 		<div id="ligneverticale"></div>
 		<section class="videos vidrealisateurs">
 			
-			<!-- <div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%" ></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div>
-			<div><img src="http://eastasia.fr/wp-content/uploads/2018/10/kingdom-710x406.jpg" width="100%" height="100%"></div> -->
+			
 		</section>
 
 
@@ -174,14 +142,10 @@
 			<!-- catégories a droite -->
 	<section class="listecatégories">
 		<ul>
-			<li><a href="default.asp">Hayao Miyazaki</a></li>
-			<li><a href="default.asp">Hirokazu Kore-eda</a></li>
-			<li><a href="default.asp">Kiroshi Kurosawa</a></li>
-			<li><a href="default.asp">Miwa Nishikawa</a></li>
-			<li><a href="default.asp">Naomi Kawase</a></li>
-			<li><a href="default.asp">Naoko Yamada</a></li>
-			<li><a href="default.asp">Satoshi Kon</a></li>
-			<li><a href="default.asp">Takeshi Kitano</a></li>
+			<li id="realisateurhayao">Hayao Miyazaki</li>
+			<li id="realisateurhirokazu">Hirokazu Kore-eda</li>
+			<li id="realisateurmiwa">Miwa Nishikawa</li>
+			<li id="realisateurnaoko">Naoko Yamada</li>
 		</ul>
 	</section>
 

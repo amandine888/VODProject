@@ -7,6 +7,8 @@ body{
 	background: #0A0618;
 	font-family: 'Maven Pro', sans-serif;
 }
+
+
 iframe{
 	position: fixed;
 	width: 100%;
@@ -14,127 +16,55 @@ iframe{
 }
 
 
-.visionnage{
-	width: 100%;
-	height: 100%;
-}
-
 .retourparametre{
 	width: 100%;
-	min-height: 50px;
+	height: 6vw;
 	display: flex;
-	justify-content: space-between;
-	/*background: rgba(10, 6, 24, 0.85);*/
-	position: absolute;
-	top: 10px;
+	/*justify-content: center;*/
+	align-items: center;
+	background: rgba(10, 6, 24, 0.5);
+	/*position: absolute;
+	top: 0.1vw;*/
 }
 
 .retourparametre img{
-	width: 50px;
-	height: 50px;
-	margin: 0 20px;
+	width: 7.6vw;
+	height: 7.6vw;
+	margin: 0 3vw;
 }
 
-.pause{
-	min-width: 100%;
-	min-height: 170px;
-	/*background: rgba(10, 6, 24, 0.85);*/
-	display: flex;
-	justify-content: center;
+#retour{
+	width: 3.5vw;
+	height:3.5vw;
 	position: absolute;
-	bottom: 50%;
+	z-index: 1;
 }
 
-.soustitres{
-	min-width: 100%;
-	min-height: 70px;
+#retour:hover{
+	border-top: 1px solid whitesmoke;
+	border-bottom: 1px solid whitesmoke;
+}
+
+.retourparametre:hover{
+	display: flex;
+}
+
+#retour, #logo:hover{
+	cursor: pointer;
+}
+
+#logo{
+	font-family: "Long Cang", sans-serif;
+	font-size: 6vw;
+	font-weight: 400;
+	color: #FFFFF;
+	position: absolute;
+	width: 100%;
 	text-align: center;
-	/*background: rgba(10, 6, 24, 0.85);*/
-	position: absolute;
-	bottom: 150px;
-}
-
-.parametreprogression{
-	width: 100%;
-	height: 150px;
-	display: flex;
-	flex-wrap: wrap;
-	position: absolute;
-	bottom: 0;
-	/*background: rgba(10, 6, 24, 0.85);*/
+	margin: 0;
+	/*text-shadow: 2px 2px #655B6C;*/
+	text-shadow: 2px 2px 2px #655B6C, 0 0 1em #0A0618, 0 0 0.2em #655B6C;
 }
 
 
 
-.imagesdefilement{
-	width: 100%;
-	height: 100px;
-	display: flex;
-	flex-direction: row;
-}
-
-.baricones{
-	min-width: 100%;
-	min-height: 50px;
-	/*background: rgba(10, 6, 24, 0.85);*/
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-}
-
-.baricones img {
-	width:30px;
-	height: 30px;
-}
-
-.groupbuttgauche{
-	margin-left: 30px;
-	display: flex;
-	justify-content: space-around;
-	width: 20%;
-}
-
-.groupbuttdroit{
-	margin-right: 30px;
-	display: flex;
-	justify-content: space-around;
-	width: 20%;
-}
-
-.langues{
-	background: red;
-	min-width: 90px;
-	height: 150px;
-	position: absolute;
-	right: 250px;
-	bottom: 150px;
-	border: 2px solid #0A0618;	
-	background: rgba(101, 91, 108, 0.95);
-	text-align: center;
-	display: none;
-}
-
-.langues ul{
-	line-height: 30px;
-	list-style: none;
-	padding:2px;
-	width: 100%;
-}
-
-
-
-.imagesdefilement div{
-	width:10%;
-	height: 100%;
-	border: 1px solid rgba(10, 6, 24);
-}
-
-
-.episode{
-	width: 100%;
-	position: absolute;
-	top: 10%;
-	min-height: 300px;
-	background: red;
-	display: none;
-}

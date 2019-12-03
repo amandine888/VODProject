@@ -1,35 +1,99 @@
 $( document ).ready(function() {
-    
 
-    $.get("https://brianboudrioux.fr/simplon/api/products/", function(data, test){
-    // var div = document.createElement("div")
-    
-    $(".vidfilms").text("")
-      for (var i = 0; i < data.length; i++) {
-          var div = document.createElement("div")
-          var video = document.querySelector(".vidfilms")
-          var img = document.createElement("img")
-          video.append(div)
-          div.append(img)
-          $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
+  this.film = function (data) {
+    for (var i = 0; i < data.length; i++) {
+        var div = document.createElement("div")
+        var video = document.querySelector(".vidfilms")
+        var img = document.createElement("img")
+        video.append(div)
+        div.append(img)
+        $(img).attr({"src":data[i].picture,"alt":data[i].media, "width":"100%", "height":"100%"})
+          $(img).click(function(){
+              var lien = $(this).attr("alt")
+              window.location.href= "./visionnage.html?lien="+lien;
+
+          })
+        }
+    }
+
+
+  this.serie = function(data){
+    for (var i = 0; i < data.length; i++) {
+      var div = document.createElement("div")
+      var video = document.querySelector(".vidseries")
+      var img = document.createElement("img")
+      video.append(div)
+      div.append(img)
+      $(img).attr({"src":data[i].picture,"alt":data[i].media, "width":"100%", "height":"100%"})
+
+      $(img).click(function(){
+          var lien = $(this).attr("alt")
+          window.location.href= "./visionnage.html?lien="+lien;
+
+      })
+    }
+  }
+
+
+  this.anime = function(data){
+    for (var i = 0; i < data.length; i++) {
+        var div = document.createElement("div")
+        var video = document.querySelector(".vidanimes")
+        var img = document.createElement("img")
+        video.append(div)
+        div.append(img)
+        $(img).attr({"src":data[i].picture,"alt":data[i].media, "width":"100%", "height":"100%"})
+
+          $(img).click(function(){
+              var lien = $(this).attr("alt")
+              window.location.href= "./visionnage.html?lien="+lien;
+          })
       }
-      $("#categoriesfilms").addClass("selected")
+  }
 
+
+  this.realisateur= function(data){
+    for (var i = 0; i < data.length; i++) {
+      var div = document.createElement("div")
+      var video = document.querySelector(".vidrealisateurs")
+      var img = document.createElement("img")
+      video.append(div)
+      div.append(img)
+      $(img).attr({"src":data[i].picture,"alt":data[i].media, "width":"100%", "height":"100%"})
+
+        $(img).click(function(){
+            var lien = $(this).attr("alt")
+            window.location.href= "./visionnage.html?lien="+lien;
+
+        })
+    }
+  }
+
+ that = this;
+
+
+
+
+
+    $.get("https://brianboudrioux.fr/simplon/api/products/", function(data, test){    
+    $(".vidfilms").text("")
+      that.film(data)
+
+      $("#categoriesfilms").addClass("selected")
   });
 
 
+// $(".listecatégories li").mouseenter(function(){
+//   $(this).css({"text-decoration-line":"line-through"});
+//   })
+// $(".listecatégories li").mouseleave(function(){
+//   $(this).css("text-decoration-line","none");
+// });
 
-$(".listecatégories li").mouseenter(function(){
-  $(this).css({"text-decoration-line":"line-through"});
-  })
-$(".listecatégories li").mouseleave(function(){
-  $(this).css("text-decoration-line","none");
-});
 
-
-$("#misora").mouseenter(function(){
-  $(this).css("border","none");
-});
+// $("#misora").mouseenter(function(){
+//   $(this).css("border","none");
+// });
 
 
 $(".icone").click(function(){
@@ -47,7 +111,7 @@ $(".icone").click(function(){
 
 $("#categoriesfilms").click(function(){
    $("#cat").text("Films");
-   $("#categoriesfilms").addClass("selected")
+   $("#categoriesfilms a").addClass("selected")
    $("#categoriesseries, #categoriesanimes, #categoriesrealisateurs").removeClass("selected")
   if($(".middlefilms").css("display") === "none"){
     $(".middlefilms").fadeIn("slow").css("display","flex");
@@ -89,30 +153,21 @@ $("#categoriesrealisateurs").click(function(){
   if($(".middlerealisateurs").css("display")==="none"){
     $(".middlerealisateurs").fadeIn("slow").css("display","flex");
     $(".middlefilms, .middleanimes, .middleseries").css("display","none");
+
+
   }
 })
 
 
+
 // images
-
-$("#categoriesfilms").click(function oui(){
+$("#categoriesfilms").click(function(){
     
-  $.get("https://brianboudrioux.fr/simplon/api/products/", function(data, test){
-    // var div = document.createElement("div")
-    
+  $.get("https://brianboudrioux.fr/simplon/api/products/", function(data, test){    
     $(".vidfilms").text("")
-    for (var i = 0; i < data.length; i++) {
-      var div = document.createElement("div")
-      var video = document.querySelector(".vidfilms")
-      var img = document.createElement("img")
-      video.append(div)
-      div.append(img)
-      $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      }
-
-
+    
+      that.film(data)
   });
-
 });
 
 
@@ -120,175 +175,107 @@ $("#categoriesfilms").click(function oui(){
                 // Dans films
 
 $("#filmsaction").click(function(){
-  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc001b01192ac774b019fe2" , function(data, test){
-    // var div = document.createElement("div")
-    $(".vidfilms").text("")
-   
-    for (var i = 0; i < data.length; i++) {
-      var div = document.createElement("div")
-      var video = document.querySelector(".vidfilms")
-      // var video = $(".vidfilms").clone(false)
-      var img = document.createElement("img")
-      video.append(div)
-      div.append(img)
-      $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      }
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc001b01192ac774b019fe2" , function(data, test){    $(".vidfilms").text("")
 
-  });
+    that.film(data)
+  })
 });
 
 
 
 $("#filmscomedie").click(function(){
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
   $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbeffb7cbd3166665f3a45b" , function(data, test){
     $(".vidfilms").text("")
-   
-    for (var i = 0; i < data.length; i++) {
-      var div = document.createElement("div")
-      var video = document.querySelector(".vidfilms")
-      var img = document.createElement("img")
-      video.append(div)
-      div.append(img)
-      $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      console.log(div)
-      }
+
+   that.film(data)
 
   });
 });
 
 
 $("#filmshorreur").click(function(){
-  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0a3e6cb3406eba1ac77b" , function(data, test){
-    // var div = document.createElement("div")
-    $(".vidfilms").text("")
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0a3e6cb3406eba1ac77b" , function(data, test){    $(".vidfilms").text("")
    
-    for (var i = 0; i < data.length; i++) {
-      var div = document.createElement("div")
-      var video = document.querySelector(".vidfilms")
-      // var video = $(".vidfilms").clone(false)
-      var img = document.createElement("img")
-      video.append(div)
-      div.append(img)
-      $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      console.log(div)
-      }
+    that.film(data)
 
   });
 });
 
 
 $("#filmsSF").click(function(){
-  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc002181192ac774b019fe3" , function(data, test){
-    // var div = document.createElement("div")
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc002181192ac774b019fe3" , function(data, test){    
     $(".vidfilms").text("")
    
-    for (var i = 0; i < data.length; i++) {
-      var div = document.createElement("div")
-      var video = document.querySelector(".vidfilms")
-      // var video = $(".vidfilms").clone(false)
-      var img = document.createElement("img")
-      video.append(div)
-      div.append(img)
-      $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      console.log(div)
-      }
+    that.film(data)
 
   });
 });
+
+
+
   // series
 
 $("#categoriesseries").click(function(){
-  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0c7d6cb3406eba1ac781" , function(data, test){
-    // var div = document.createElement("div")
-    $(".vidseries").text("")
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc002181192ac774b019fe3" , function(data, test){   
+   $(".vidseries").text("")
    
-    for (var i = 0; i < data.length; i++) {
-      var div = document.createElement("div")
-      var video = document.querySelector(".vidseries")
-      var img = document.createElement("img")
-      video.append(div)
-      div.append(img)
-      $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      console.log(div)
-      }
+    that.serie(data)
 
   });
 });
-
 
 
 
 $("#seriesaction").click(function(){
-  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc001b01192ac774b019fe2" , function(data, test){
-    // var div = document.createElement("div")
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc001b01192ac774b019fe2" , function(data, test){    
     $(".vidseries").text("")
    
-    for (var i = 0; i < data.length; i++) {
-      var div = document.createElement("div")
-      var video = document.querySelector(".vidseries")
-      var img = document.createElement("img")
-      video.append(div)
-      div.append(img)
-      $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      console.log(div)
-      }
-
+    that.serie(data)
   });
 });
 
 
 $("#seriescomedie").click(function(){
-  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbeffb7cbd3166665f3a45b" , function(data, test){
-    // var div = document.createElement("div")
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbeffb7cbd3166665f3a45b" , function(data, test){    
     $(".vidseries").text("")
    
-    for (var i = 0; i < data.length; i++) {
-      var div = document.createElement("div")
-      var video = document.querySelector(".vidseries")
-      var img = document.createElement("img")
-      video.append(div)
-      div.append(img)
-      $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      console.log(div)
-      }
+    that.serie(data)
 
   });
 });
 
 
 $("#serieshorreur").click(function(){
-  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0a3e6cb3406eba1ac77b" , function(data, test){
-    // var div = document.createElement("div")
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0a3e6cb3406eba1ac77b" , function(data, test){    
     $(".vidseries").text("")
    
-    for (var i = 0; i < data.length; i++) {
-      var div = document.createElement("div")
-      var video = document.querySelector(".vidseries")
-      var img = document.createElement("img")
-      video.append(div)
-      div.append(img)
-      $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      console.log(div)
-    }
+    that.serie(data)
 
   });
 });
 
 
 $("#seriesSF").click(function(){
-  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc002181192ac774b019fe3" , function(data, test){
-    // var div = document.createElement("div")
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0adc6cb3406eba1ac77d" , function(data, test){    
     $(".vidseries").text("")
    
-    for (var i = 0; i < data.length; i++) {
-      var div = document.createElement("div")
-      var video = document.querySelector(".vidseries")
-      var img = document.createElement("img")
-      video.append(div)
-      div.append(img)
-      $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      console.log(div)
-    }
+    that.serie(data)
 
   });
 });
@@ -299,36 +286,25 @@ $("#seriesSF").click(function(){
 
   $("#categoriesanimes").click(function(){
     $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0c166cb3406eba1ac780" , function(data, test){
-      // var div = document.createElement("div")
       $(".vidanimes").text("")
      
-      for (var i = 0; i < data.length; i++) {
-        var div = document.createElement("div")
-        var video = document.querySelector(".vidanimes")
-        var img = document.createElement("img")
-        video.append(div)
-        div.append(img)
-        $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      }
-
+      that.anime(data)
     });
   });
 
+  function funcline(){
+    $(this).addClass("ligne")
+    $(this).siblings("li").removeClass("ligne")
+  }
 
 
-  $("#categoriesanimes").click(function(){
-    $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0c166cb3406eba1ac780" , function(data, test){
-      // var div = document.createElement("div")
+  $("#animesaction").click(function(){
+      $(this).addClass("ligne")
+      $(this).siblings("li").removeClass("ligne")
+      $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc001b01192ac774b019fe2" , function(data, test){
       $(".vidanimes").text("")
      
-      for (var i = 0; i < data.length; i++) {
-        var div = document.createElement("div")
-        var video = document.querySelector(".vidanimes")
-        var img = document.createElement("img")
-        video.append(div)
-        div.append(img)
-        $(img).attr({"src":data[i].picture, "width":"100%", "height":"100%"})
-      }
+      that.anime(data)
 
     });
   });
@@ -336,15 +312,115 @@ $("#seriesSF").click(function(){
 
 
 
-$("middlefilms div").click(function(){
-  var att = $("img").attr()
-  console.log(att)
-})
+$("#animesaventure").click(function(){
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
+    $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0a9f6cb3406eba1ac77c" , function(data, test){
+      $(".vidanimes").text("")
+     
+      that.anime(data)
+
+    });
+  });
+
+
+
+$("#animescomedie").click(function(){
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
+    $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbeffb7cbd3166665f3a45b" , function(data, test){
+      $(".vidanimes").text("")
+     
+      that.anime(data)
+
+    });
+  });
+
+
+
+$("#animesSF").click(function(){
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
+    $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0adc6cb3406eba1ac77d" , function(data, test){
+      $(".vidanimes").text("")
+     
+      that.anime(data)
+
+    });
+  });
+
+
+$("#categoriesrealisateurs").click(function(){
+    
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc004641192ac774b019fe6", function(data, test){    
+    $(".vidrealisateurs").text("")
+
+    that.realisateur(data)
+  });
+
+});
+$("#realisateurhayao").click(function(){
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne")
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0adc6cb3406eba1ac77d", function(data, test){    
+    $(".vidrealisateurs").text("")
+
+    that.realisateur(data)
+
+  });
+});
+
+
+$("#realisateurhirokazu").click(function(){
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne") 
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc004641192ac774b019fe6", function(data, test){    
+    $(".vidrealisateurs").text("")
+    
+    that.realisateur(data)
+
+  });
+
+});
+
+
+$("#realisateurmiwa").click(function(){
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne") 
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dbf0adc6cb3406eba1ac77d", function(data, test){    
+    $(".vidrealisateurs").text("")
+    
+    that.realisateur(data)
+
+  });
+
+});
+
+
+$("#realisateurnaoko").click(function(){
+  $(this).addClass("ligne")
+  $(this).siblings("li").removeClass("ligne") 
+  $.get("https://brianboudrioux.fr/simplon/api/products/category/5dc004641192ac774b019fe6", function(data, test){    
+    $(".vidrealisateurs").text("")
+    
+    that.realisateur(data)
+
+  });
+
+});
+
+
 
 
 $("#misora").click(function(){
   window.location="index.html"
 })
+
+
+// $("img").click(function(){
+//   console.log($("this").getAttribut("src"))
+
+// })
 
 
 
