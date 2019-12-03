@@ -23,8 +23,8 @@ iframe{
 	/*justify-content: center;*/
 	align-items: center;
 	background: rgba(10, 6, 24, 0.5);
-	position: absolute;
-	top: 0.1vw;
+	/*position: absolute;
+	top: 0.1vw;*/
 }
 
 .retourparametre img{
@@ -38,6 +38,11 @@ iframe{
 	height:3.5vw;
 	position: absolute;
 	z-index: 1;
+}
+
+#retour:hover{
+	border-top: 1px solid whitesmoke;
+	border-bottom: 1px solid whitesmoke;
 }
 
 .retourparametre:hover{
@@ -57,5 +62,9 @@ iframe{
 	width: 100%;
 	text-align: center;
 	margin: 0;
+	/*text-shadow: 2px 2px #655B6C;*/
+	text-shadow: 2px 2px 2px #655B6C, 0 0 1em #0A0618, 0 0 0.2em #655B6C;
 }
+
+
 

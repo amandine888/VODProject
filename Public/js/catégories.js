@@ -91,9 +91,9 @@ $( document ).ready(function() {
 // });
 
 
-$("#misora").mouseenter(function(){
-  $(this).css("border","none");
-});
+// $("#misora").mouseenter(function(){
+//   $(this).css("border","none");
+// });
 
 
 $(".icone").click(function(){
@@ -111,7 +111,7 @@ $(".icone").click(function(){
 
 $("#categoriesfilms").click(function(){
    $("#cat").text("Films");
-   $("#categoriesfilms").addClass("selected")
+   $("#categoriesfilms a").addClass("selected")
    $("#categoriesseries, #categoriesanimes, #categoriesrealisateurs").removeClass("selected")
   if($(".middlefilms").css("display") === "none"){
     $(".middlefilms").fadeIn("slow").css("display","flex");
@@ -417,10 +417,10 @@ $("#misora").click(function(){
 })
 
 
-$("img").click(function(){
-  console.log($("this").getAttribut("src"))
+// $("img").click(function(){
+//   console.log($("this").getAttribut("src"))
 
-})
+// })
 
 
 
