@@ -68,7 +68,7 @@ window.onload = function() {
                 window.location.href = "sign_up.html"; }
 
             else {
-                alert('Account does not exist, please register');}
+                alert('Compte inexistant, veuillez recommencer');}
         })
     })
 }

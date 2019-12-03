@@ -343,8 +343,12 @@ input{
     margin-bottom: 1.38vw;
 }
 
+.FormGroup label{
+    font-size: 1.1vw;
+}
+
 ::placeholder{
-    font-size: 0.7vw;
+    font-size: 0.75vw;
 }
 
 /* input:focus {
@@ -432,12 +436,14 @@ input{
     box-shadow:0 2px 5px 2px #655B6C;
     margin-right: 1.38vw;
     padding: 1.38vw;
+    font-size: 1.1vw;
 }
 
 #AbonnementPremium {
     box-shadow:0 2px 5px 2px #655B6C;
     margin-left: 1.38vw;
     padding: 1.38vw;
+    font-size: 1.1vw;
 }
 
 .Bouton button{
@@ -467,6 +473,11 @@ input{
 #Accroche a{
     font-size: 1.66vw;
     color: whitesmoke;
+    text-decoration: none;
+}
+
+#Accroche a:hover {
+    color: #655B6C;
     text-decoration: underline;
 }
 
@@ -528,6 +539,18 @@ body{
     width: 65%;
     height: 60vh;
 }
+
+/* Header */
+
+h1{
+    font-size: 7vw;
+}
+
+#line {   
+    display: none;
+    /* margin-left: 29.94vw;
+    margin-top: -15vw; */
+}
     
 /* Teaser */
     
@@ -541,31 +564,74 @@ body{
 }
 
 #teaser1 {
-    width: 24%;
+    width: 24.5%;
     height: 30vh; 
 }
 
 #teaser2 {
-    width: 24%;
+    width: 24.5%;
     height: 30vh; 
 }
 
 #teaser3 {
-    width: 24%;
+    width: 24.5%;
     height: 30vh; 
 }
 
 #teaser4 {
-    width: 24%;
+    width: 24.5%;
     height: 30vh; 
 }
-    
-/* Header */
 
-#line {   
-    margin-left: 29.94vw;
-    margin-top: -17.55vw;
+#Boutons #LogIn{
+    font-size: 3vw;
 }
+
+#Boutons #SignUp{
+    font-size: 3vw;
+}
+
+/* Formulaire de Log In */
+
+#LogInForm{
+    height: 30vh;
+    margin-bottom: 14vw;
+}
+
+.FormGroup label{
+    font-size: 1.1vw;
+}
+
+input{
+    margin-bottom: 1.38vw;
+}
+
+::placeholder{
+    font-size: 0.7vw;
+}
+/* Abonnements */
+
+#ContainerAbonnement {
+    margin-bottom: 15vw;
+}
+#AbonnementBasic label{
+    padding: 0.6vw;
+    font-size: 1.3vw;
+}
+
+#AbonnementPremium label {
+    padding: 0.6vw;
+    font-size: 1.3vw;
+}
+
+/* Phrase d'accroche */
+
+#Accroche {
+    margin-bottom: 15vw;
+    text-decoration: underline;
+}
+
+/* Footer */
 
 footer{
     position: absolute;
@@ -577,7 +643,56 @@ footer{
 }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 375px){
+
+/* Header */
+
+h1{
+    font-size: 8vw;
+}
+    
+/* Teaser */
+    
+#Teaser{
+    height:20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    position: relative;
+}
+
+#teaser1 {
+    width: 23.5%;
+    height: 30vh; 
+}
+
+#teaser2 {
+    width: 23.5%;
+    height: 30vh; 
+}
+
+#teaser3 {
+    width: 23.5%;
+    height: 30vh; 
+}
+
+#teaser4 {
+    width: 23.5%;
+    height: 30vh; 
+}
+
+/* Boutons */
+
+
+#Boutons #LogIn{
+    font-size: 3.5vw;
+}
+
+#Boutons #SignUp{
+    font-size: 3.5vw;
+}
+
 
 }
 
