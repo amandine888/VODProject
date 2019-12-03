@@ -22,12 +22,12 @@
 
 <!-- Header -->
   <header id="HeaderContainer">
-      <img src="Public/img/return.png" alt="Icône retour">
+      <img src="Public/img/return.png" class="btn" data-toggle="tooltip" data-placement="bottom" title="Revenir à la page d'accueil">
       <div id="Entête">
         <h1> MISORA</h1>
         <div id="line"></div>
       </div>
-      <button id="LogIn" class="btn-lg rounded-0"><a href="#">LOG IN</a></button>
+      <button id="LogIn" class="borderXwidth" class="btn-sm rounded-0" class="btn" data-toggle="tooltip" data-placement="bottom" title="Cliquez ici pour vous connectez"><a href="#">LOG IN</a></button>
   </header>
 
 <!-- Abonnements -->
@@ -37,7 +37,7 @@
     <div id="Basic">
       <h3>Abonnement Basic - 7€/mois</h3>
       
-      <form id="BasicFormulaire" action="/" method="post">
+      <form id="BasicFormulaire">
 
         <div id="CheckIdentity" class="form-check-inline">
           <input class="form-check-input" type="checkbox" name="check-box"/>
@@ -50,36 +50,29 @@
           
         <div class="form-group">
           <div class="FormGroup">
-            <label class="col-sm-5 col-form-label-sm"> USERNAME </label>
+            <label class="col-sm-5 col-form-label-sm"> NOM D'UTILISATEUR <span class="required">*</span></label>
             <input type="text" class="form control form-control-sm mb-2 col-sm-6" placeholder="Entrez votre nom d'utilisateur" required autocomplete="off" id="Username" />
           </div>
         </div>
           
-        <!-- <div class="form-group">
-          <div class="FormGroup">
-            <label class="col-sm-5 col-form-label-sm">PRENOM</label>
-            <input type="text" class="form control form-control-sm mb-2 col-sm-6" placeholder="Entrez votre prénom" required autocomplete="off" id="Prenom"/>
-          </div>
-        </div> -->
-          
         <div class="form-group">
           <div class="FormGroup">
-            <label class="col-sm-5 col-form-label-sm">EMAIL</label>
+            <label class="col-sm-5 col-form-label-sm">EMAIL <span class="required">*</span></label>
             <input type="email" class="form control form-control-sm mb-2 col-sm-6" placeholder="Entrez votre email" required autocomplete="off" id="Email"/>
           </div>
         </div>
             
         <div class="form-group">
           <div class="FormGroup">
-            <label class="col-sm-5 col-form-label-sm">PASSWORD</label>
-            <input type="password" class="form control form-control-sm mb-2 col-sm-6" placeholder="Entrez votre password" required autocomplete="off" id="Password"/>
+            <label class="col-sm-5 col-form-label-sm">MOT DE PASSE <span class="required">*</span></label>
+            <input type="password" class="form control form-control-sm mb-2 col-sm-6" placeholder="Entrez votre mot de passe" required autocomplete="off" id="Password"/>
           </div>
         </div>
 
         <div class="form-group">
           <div class="FormGroup">
-            <label class="col-sm-5 col-form-label-sm">CONFIRMATION PASSWORD</label>
-            <input type="password" class="form control form-control-sm mb-2 col-sm-6" placeholder="Confirmez votre password" required autocomplete="off" id="Confirm"/>
+            <label class="col-sm-5 col-form-label-sm">CONFIRMATION MOT DE PASSE <span class="required">*</span></label>
+            <input type="password" class="form control form-control-sm mb-2 col-sm-6" placeholder="Confirmez votre mot de passe" required autocomplete="off" id="Confirm"/>
           </div>
         </div>
             
@@ -93,8 +86,10 @@
         </div>
 
         <div id="LastSection">
-          <button id="BoutonBasic" type="submit" class="button button-block">Confirmer et payer</button>
+          <button id="BoutonBasic" type="button" class="button button-block">Confirmer et payer</button>
         </div>
+
+        <p><small><span class="required">*</span>Champs obligatoires</small></p>
 
       </form>
     </div>
@@ -102,7 +97,7 @@
 <!-- Abonnement Premium-->
     <div id="Premium">
         <h3>Abonnement Premium - 11€/mois</h3>
-        <form id="PremiumFormulaire" action="/" method="post">
+        <form id="PremiumFormulaire">
 
           <div id="CheckIdentity2" class="form-check-inline">
             <input class="form-check-input" type="checkbox" name="check-box"/>
@@ -115,36 +110,29 @@
             
           <div class="form-group">
             <div class="FormGroup">
-              <label class="col-sm-5 col-form-label-sm"> USERNAME </label>
+              <label class="col-sm-5 col-form-label-sm"> NOM D'UTILISATEUR <span class="required">*</span></label>
               <input type="text" class="form control form-control-sm mb-2 col-sm-6" placeholder="Entrez votre nom d'utilisateur" required autocomplete="off" id="Username" />
             </div>
           </div>
             
-          <!-- <div class="form-group">
-            <div class="FormGroup">
-              <label class="col-sm-5 col-form-label-sm">PRENOM</label>
-              <input type="text" class="form control form-control-sm mb-2 col-sm-6" placeholder="Entrez votre prénom" required autocomplete="off" id="Prenom"/>
-            </div>
-          </div> -->
-            
           <div class="form-group">
             <div class="FormGroup">
-              <label class="col-sm-5 col-form-label-sm">EMAIL</label>
+              <label class="col-sm-5 col-form-label-sm">EMAIL<span class="required">*</span></label>
               <input type="email" class="form control form-control-sm mb-2 col-sm-6" placeholder="Entrez votre email" required autocomplete="off" id="Email"/>
             </div>
           </div>
               
           <div class="form-group">
             <div class="FormGroup">
-              <label class="col-sm-5 col-form-label-sm">PASSWORD</label>
-              <input type="password" class="form control form-control-sm mb-2 col-sm-6" placeholder="Entrez votre password" required autocomplete="off" id="Password"/>
+              <label class="col-sm-5 col-form-label-sm">MOT DE PASSE <span class="required">*</span></label>
+              <input type="password" class="form control form-control-sm mb-2 col-sm-6" placeholder="Entrez votre mot de passe" required autocomplete="off" id="Password"/>
             </div>
           </div>
   
           <div class="form-group">
             <div class="FormGroup">
-              <label class="col-sm-5 col-form-label-sm">CONFIRMATION PASSWORD</label>
-              <input type="password" class="form control form-control-sm mb-2 col-sm-6" placeholder="Confirmez votre password" required autocomplete="off" id="Confirm"/>
+              <label class="col-sm-5 col-form-label-sm">CONFIRMATION MOT DE PASSE <span class="required">*</span></label>
+              <input type="password" class="form control form-control-sm mb-2 col-sm-6" placeholder="Confirmez votre mot de passe" required autocomplete="off" id="Confirm"/>
             </div>
           </div>
               
@@ -158,13 +146,15 @@
           </div>
   
           <div id="LastSection2">
-            <button id="BoutonPremium" type="submit" class="button button-block">Confirmer et payer</button>
+            <button id="BoutonPremium" type="button" class="button button-block">Confirmer et payer</button>
           </div>
+
+          <p><small><span class="required">*</span>Champs obligatoires</small></p>
   
         </form>
       </div>
-      <div id="Switch">
-        <h3>Switch pour l'abonnement Premium - 11€/mois</h3>
+      <div id="Switch" class="pullRightLeft">
+        <h3>Cliquez pour l'abonnement Premium - 11€/mois</h3>
       </div> 
   </section>
 
@@ -174,9 +164,9 @@
       <a href="#">Nous connaître</a> 
       <a href="#">FAQ</a>
       <section id="Réseaux">
-          <a href="#"><img src="Public/img/Twitter.png" alt="Icône Twitter"></a>
-          <a href="#"><img src="Public/img/Facebook.png" alt="Icône Facebook"></a>
-          <a href="#"><img src="Public/img/Instagram.png" alt="Icône Instagram"></a> 
+          <a href="https://twitter.com/"><img src="Public/img/Twitter.png" alt="Icône Twitter"></a>
+          <a href="https://www.facebook.com/"><img src="Public/img/Facebook.png" alt="Icône Facebook"></a>
+          <a href="https://www.instagram.com/"><img src="Public/img/Instagram.png" alt="Icône Instagram"></a> 
       </section>
       <a href="#">Confidentialité</a>
       <a href="#">CGU</a> 
@@ -185,7 +175,6 @@
   </footer>
 
 <!-- <script>src="../jsBootstrap/bootstrap.js"</script>  -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>       
 </body>
