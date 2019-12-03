@@ -26,6 +26,12 @@ window.onload = function() {
         $("#MainPage #line").css({"-webkit-transform":"translateY(0px)"})
     })
 
+    $(".Bouton").on("click", function(){
+        window.location.href = "sign_up.html"; 
+    })
+
+    // Requête get Teaser : 
+
     $.get("https://brianboudrioux.fr/simplon/api/products/5dc00d241192ac774b019fed", function(data, status) {
         console.log(data.media);
         $("#teaser1").attr("src", data.media)});
